@@ -112,6 +112,35 @@ const exercicio7 = () => {
   }
 };
 
+const exercicio8 = () => {
+  let palavra = document.getElementById("palavra").value;
+  let erro = document.getElementById("erro");
+  let resultado = document.getElementById("resultado");
+
+  let error = "";
+  let result = "";
+
+  if (palavra === "") {
+    error = "Digite uma palavra válida!";
+  } else {
+    let palavraInvertida = palavra.length - 1;
+    let ePalindromo = true;
+    for (let i = 0; i < palavraInvertida; i++, palavraInvertida--) {
+      if (palavra[i] !== palavra[palavraInvertida]) {
+        ePalindromo = false;
+        break;
+      }
+    }
+    if (ePalindromo) {
+      result = `"${palavra}" é um palíndromo!`;
+    } else {
+      result = `"${palavra}" não é um palíndromo.`;
+    }
+  }
+  erro.innerHTML = error;
+  resultado.innerHTML = result;
+};
+
 const exercicio9 = () => {
   let soma = 0;
 
@@ -124,7 +153,25 @@ const exercicio9 = () => {
 };
 
 const exercicio10 = () => {
-  
+  let num = document.getElementById("num").value;
+  let error = document.getElementById("erro");
+  let result = document.getElementById("resultado");
+
+  if (num < 0) {
+    error.innerHTML = `O número ${num} não é válido`;
+    result.innerHTML = "";
+  } else {
+    error.innerHTML = "";
+    result.innerHTML = "";
+  }
+  let soma = 0;
+  let contador = 0;
+  while (contador <= num) {
+    soma += contador;
+    contador++;
+  }
+  let media = soma / contador;
+  result.innerHTML = `A soma é ${contador} </br> A média é ${media}`;
 };
 
 const exercicio11 = () => {
