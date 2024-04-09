@@ -389,17 +389,17 @@ const exercicio22 = () => {
   let error = document.getElementById("erro");
   let resultado = document.getElementById("resultado");
   let valor = document.getElementById("num").value * 1;
-  
+
   error.innerHTML = "";
   resultado.innerHTML = "";
 
   if (valor <= 0) {
     error.innerHTML = "Insira um valor postivo";
-  } else if (soma <= 100) {
+  } else if (soma < 100) {
     error.innerText = "";
     soma += valor;
     resultado.innerHTML = `#${soma}`;
-  } else if (soma > 100) {
+  } else {
     error.innerText = "A soma deu mais que 100";
   }
 };
