@@ -384,8 +384,84 @@ const exercicio21 = () => {
   }
 };
 
-const exercicio22 = () => {};
+var soma = 0;
+const exercicio22 = () => {
+  let error = document.getElementById("erro");
+  let resultado = document.getElementById("resultado");
+  let valor = document.getElementById("num").value * 1;
+  error.innerHTML = ""
+  resultado.innerHTML = ""
+  if (valor <= 0) {
+    error.innerHTML = "Insira um valor postivo";
+  } else if (soma <= 100) {
+    error.innerText = ""
+    soma += valor;
+    resultado.innerHTML = `#${soma}`;
+  } else if (soma > 100) {
+    error.innerText = "A soma deu mais que 100";
+  }
+};
 
-const exercicio23 = () => {};
+const exercicio23 = () => {
+  let resultado = document.getElementById("resultado");
+  let error = document.getElementById("erro");
 
-const exercicio24 = () => {};
+  resultado.innerHTML = "";
+
+  let frase = document.getElementById("frase").value;
+  let palavra = document.getElementById("palavra").value;
+  let palavras = frase.split(" ");
+
+  let contar = 0;
+
+  if (frase == "" || palavra == "") {
+    error.innerText = `Preencha os campos corretamente`;
+  } else {
+    for (let i = 0; i <= palavras.length; i++) {
+      if (palavras[i] == palavra) {
+        contar++;
+      }
+      error.innerHTML = "";
+      resultado.innerText = `A palavra ${palavra} aparece ${contar} vezes`;
+    }
+  }
+};
+
+const exercicio24 = () => {
+  let frase = document.getElementById("frase").value.trim();
+  let resultado = document.getElementById("resultado");
+  let error = document.getElementById("erro");
+  let palavras = frase.split(" ");
+
+  let fraseTitleCase = palavras
+    .map((palavra) => {
+      return palavra.charAt(0).toUpperCase() + palavra.slice(1).toLowerCase();
+    })
+    .join(" ");
+
+  if (frase == "") {
+    error.innerText = `Escreva uma frase`;
+  } else {
+    error.innerHTML = "";
+    resultado.innerText = fraseTitleCase;
+  }
+};
+
+const exercicio25 = () => {
+  let num1 = document.getElementById("num1").value;
+  let num2 = document.getElementById("num2").value;
+  let num3 = document.getElementById("num3").value;
+  let resultado = document.getElementById("resultado");
+  let error = document.getElementById("erro");
+
+  let numeros = [num1, num2, num3];
+
+  numeros.sort((a, b) => a - b);
+
+  if (num1 == "" || num2 == "" || num3 == "") {
+    error.innerText = `Escreva números válidos`;
+  } else {
+    error.innerHTML = "";
+    resultado.innerText = numeros;
+  }
+};
