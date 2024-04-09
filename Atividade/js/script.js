@@ -113,33 +113,6 @@ const exercicio7 = () => {
 };
 
 const exercicio8 = () => {
-  //   let palavra = document.getElementById("palavra").value;
-  //   let error = document.getElementById("erro");
-  //   let result = document.getElementById("resultado");
-
-  //   error = "";
-  //   result = "";
-
-  //   if (palavra === "") {
-  //     error = "Digite uma palavra válida!";
-  //   } else {
-  //     let palavraInvertida = palavra.length - 1;
-  //     let ePalindromo = true;
-  //     for (let i = 1; i < palavraInvertida; i++, palavraInvertida--) {
-  //       if (palavra[i] !== palavra[palavraInvertida]) {
-  //         ePalindromo = false;
-  //         break;
-  //       }
-  //     }
-  //     if (ePalindromo) {
-  //       result = `"${palavra}" é um palíndromo!`;
-  //     } else {
-  //       result = `"${palavra}" não é um palíndromo.`;
-  //     }
-  //   }
-  //   erro.innerHTML = error;
-  //   resultado.innerHTML = result;
-
   let palavra = document.getElementById("palavra").value;
   let error = document.getElementById("erro");
   let result = document.getElementById("resultado");
