@@ -367,7 +367,7 @@ const exercicio22 = () => {
   resultado.innerHTML = "";
 
   if (valor <= 0) {
-    error.innerHTML = "Insira um valor postivo";
+    error.innerHTML = "Insira um número válido";
   } else if (soma < 100) {
     error.innerText = "";
     soma += valor;
