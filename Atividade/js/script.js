@@ -192,8 +192,8 @@ const exercicio12 = () => {
 };
 
 const exercicio13 = () => {
-  let num1 = document.getElementById("num1").value;
-  let num2 = document.getElementById("num2").value;
+  let num1 = Number(document.getElementById("num1").value);
+  let num2 = Number(document.getElementById("num2").value);
   let error = document.getElementById("erro");
   let result = document.getElementById("resultado");
 
@@ -351,9 +351,9 @@ const exercicio21 = () => {
   let novoTexto = frase.split(" ");
 
   if (frase == "") {
-    error.innerHTML = `Informe uma frase válida`;
+    error.innerText = `Informe uma frase válida`;
   } else {
-    result.innerHTML = `${novoTexto.join("")}`;
+    result.innerText = `${novoTexto.join(" ")}`;
   }
 };
 
@@ -361,19 +361,19 @@ var soma = 0;
 const exercicio22 = () => {
   let error = document.getElementById("erro");
   let resultado = document.getElementById("resultado");
-  let valor = document.getElementById("num").value * 1;
+  let valor = parseInt(document.getElementById("num").value);
 
-  error.innerHTML = "";
-  resultado.innerHTML = "";
+  error.innerText = "";
+  resultado.innerText = "";
 
   if (valor <= 0) {
-    error.innerHTML = "Insira um número válido";
-  } else if (soma < 100) {
+    error.innerText = "Insira um número válido";
+  } else if (soma <= 100) {
     error.innerText = "";
     soma += valor;
-    resultado.innerHTML = `#${soma}`;
+    resultado.innerText = `#${soma}`;
   } else {
-    error.innerText = "A soma deu mais que 100";
+    error.innerText = `Soma total: ${soma}`;
   }
 };
 
@@ -439,7 +439,7 @@ const exercicio25 = () => {
   if (num1 == "" || num2 == "" || num3 == "") {
     error.innerText = `Escreva números válidos`;
   } else {
-    error.innerHTML = "";
+    error.innerText = "";
     resultado.innerText = numeros;
   }
 };
